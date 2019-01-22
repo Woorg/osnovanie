@@ -1,0 +1,217 @@
+.nav
+	position relative
+	max-width 1060px
+	+r($dX)
+		max-width 890px
+	+r($dS)
+		position static
+	.nav__item_phone
+		display none
+		+r($dS)
+			display block
+	.nav__phone
+		display none
+		+r($dS)
+			margin 20px auto 40px
+			max-width 211px
+			display flex
+	&__list-w
+		width 100%
+		display flex
+		justify-content flex-end
+		align-items center
+		+r($dS)
+			width 50px
+	&__list
+		display flex
+		// flex-flow row nowrap
+		justify-content flex-end
+		// flex 1
+	&__item
+		margin-left 40px
+		white-space nowrap
+		font-family $mM
+		+r($dX)
+			margin-left 30px
+		+r($dL)
+			margin-left 20px
+		&:first-child
+			margin-left 0
+
+	.nav__more
+		margin-left 40px
+		border none
+		cursor pointer
+		width 50px
+		height 50px
+		background transparent url('../images/general/menu-icon.svg') 0 0 no-repeat
+		text-indent -9999px
+		+r($dS)
+			margin-left 0
+		&.is-open
+			background transparent url('../images/general/menu-close.svg') 0 0 no-repeat
+		&.hidden
+			display none
+
+	.nav__dropdown
+		position absolute
+		top calc(100% + 24px)
+		right 0
+		padding-left 18px
+		padding-right 18px
+		min-width 304px
+		background-color #c42141
+		+r($dS)
+			left 0
+			right 0
+			top 100%
+			min-width 100%
+		&:after
+			position absolute
+			top -10px
+			left calc(100% - 32px)
+			content ''
+			width 0
+			height 0
+			border-style solid
+			border-width 0 10px 10px 10px
+			border-color transparent transparent #c42141 transparent
+			+r($dS)
+				left calc(100% - 50px)
+		&.hidden
+			display none
+		.nav__item
+			border-top 2px solid #ffffff
+			margin-left 0
+			padding-top 28px
+			padding-bottom 26px
+			text-align center
+			&:first-child
+				border-top none
+
+		.nav__link
+			color #ffffff
+			font-family $mM
+			font-size 18px
+			font-weight 400
+			line-height 1.7
+			letter-spacing 0.18px
+
+	&__link
+		color #303030
+		font-size 16px
+		line-height 1.93
+		letter-spacing .16px
+		text-decoration none
+		transition color .3s ease
+		+r($dX)
+			font-size 14px
+			letter-spacing .14px
+		&:hover
+			color #4a4a4a
+			transition color .3s ease
+
+	&__trigger
+		position relative
+		margin-left 30px
+		display none
+		width 50px
+		height 50px
+		cursor pointer
+		// +r($dM)
+		// 	display block
+
+	&__trigger,
+	&__trigger_active,
+	&__trigger_active .nav__trigger-icon
+		transition all .3s ease
+
+	&__trigger_active
+		.nav__trigger-icon
+			opacity 0
+		.nav__trigger-close
+			opacity 1
+			transition all .3s ease
+
+	&__trigger-icon
+		fill #fff
+		opacity 1
+
+	&__trigger-close,
+	&__trigger-icon
+		position absolute
+		top 0
+		left 0
+		width 50px
+		height 50px
+		transition all .3s ease
+
+	&__trigger-close
+		fill transparent
+		opacity 0
+
+	&__list-w
+		// +r($dS)
+		// 	display none
+		&.nav__list-w_active
+			position absolute
+			top 100%
+			left 0
+			right 0
+			padding-left 18px
+			padding-right 18px
+			display block
+			background-color #c42141
+			text-align center
+			&:after
+				position absolute
+				top -10px
+				right 28px
+				content ""
+				width 0
+				height 0
+				border-style solid
+				border-width 0 10px 10px
+				border-color transparent transparent #c42142
+			.nav__list
+				display block
+			.nav__item
+				margin-right 0
+				&:last-child
+					.nav__link
+						border-bottom none
+			.nav__link
+				border-bottom 2px solid #fff
+				padding-top 28px
+				padding-bottom 30px
+				display block
+				color #fff
+				font-size 18px
+				&:hover
+					color #fff
+
+	.navbar-toggle-more
+		display block
+		width 50px
+		height 50px
+		background url('../images/general/menu-icon.svg') 0 0 no-repeat
+		background-size cover
+		text-indent -9999px
+
+.nav_second
+	.nav__list
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+	.nav__item
+		+r($tM)
+			margin-bottom 10px
+			margin-left 0
+			margin-right 20px
+	.nav__link
+		color #b0b0b0
+		+r($m)
+			font-size 14px
+		&:hover
+			color #cacaca
+

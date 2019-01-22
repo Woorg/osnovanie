@@ -1,0 +1,10 @@
+include ../icon/icon
+include ../nav/nav
+
+mixin header()
+	header.header&attributes(attributes)
+		.header__in
+			a.header__logo.logo(href='/')
+				img.logo__desk(src='assets/images/general/logo.png', alt='Основание')
+				+icon('logo-mob', true).logo__mob
+			+nav().header__nav.nav_main

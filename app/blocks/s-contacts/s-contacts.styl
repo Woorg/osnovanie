@@ -1,0 +1,107 @@
+.s-contacts
+	position relative
+	+r($dM)
+		margin-top 138px
+		background-color #c42141
+	+r($tLs)
+		margin-top 60px
+	+r($tM)
+		margin-top 30px
+
+	&:after
+		position absolute
+		z-index -1
+		top 0
+		left 0
+		right 0
+		bottom 0
+		content ""
+		background-color #c42141
+
+	&__in
+		@extends .in
+		position relative
+		z-index 1
+		padding-top 43px
+		padding-bottom 78px
+		+r($tLs)
+			padding-top 30px
+			padding-bottom 40px
+
+	&__content
+		position relative
+		margin-right 41.6666666666667%
+		padding-right 300px
+		+r($dM)
+			padding-right 150px
+		+r($tLs)
+			margin-right 0
+			padding-right 0
+			background-color #c42141
+	&__title
+		margin-bottom 43px
+		padding-bottom 33px
+		color #fff
+		+r($tM)
+			margin-bottom 30px
+			// padding-bottom 24px
+			padding-bottom 20px
+		&:after
+			background #fff
+
+	&__item
+		margin-bottom 36px
+		+r($tM)
+			margin-bottom 26px
+		&:last-child
+			margin-bottom 0
+
+	&__item-title
+		margin-bottom 35px
+		color #40291d
+		font-family $me
+		font-size 28px
+		font-weight 400
+		line-height 1.1
+		letter-spacing .28px
+		+r($tM)
+			font-size 23px
+		+r($m)
+			margin-bottom 20px
+			font-size 18px
+			line-height 1.7
+	&__item-val
+		display block
+		color #fff
+		font-family $mB
+		font-size 36px
+		// font-weight 700
+		font-weight normal
+		line-height 1.3
+		letter-spacing .36px
+		text-decoration none
+		+r($tM)
+			font-size 30px
+		+r($m)
+			font-size 22px
+	&__img
+		position absolute
+		top 10px
+		right -130px
+		+r($d)
+			display none
+	&__map
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		background #cecece
+		width 43.379167%
+		+r($tLs)
+			position static
+			width 100%
+			height 666px
+		+r($t)
+			height 416px
+		+r($m)
+			height 290px

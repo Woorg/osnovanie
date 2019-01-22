@@ -1,0 +1,75 @@
+include ../icon/icon
+
+mixin o-sale()
+	section.o-sale&attributes(attributes)
+		.o-sale__w
+			img.o-sale__first-img(src='assets/images/general/s-about-second-img.png', alt='')
+		.o-sale__in
+			h2.o-sale__title.title Объекты в продаже
+		.o-sale__body
+			img.o-sale__second-img(src='assets/images/general/o-sale-second-img.png', alt='')
+		.o-sale__in.o-sale__in_second
+			ul.o-sale__list
+				li.o-sale__item
+					.o-sale__object
+						.o-sale__object-image
+							img(src='assets/images/content/object-img-1.jpg', alt='')
+							+icon('plus-icon', true).o-sale__plus-icon
+							a.o-sale__link(href='#')
+						.o-sale__object-content
+							h3.o-sale__object-title.title-sec ЖК «Победа»
+							.o-sale__object-text
+								p
+									| «Победа» — это современный жилой комплекс бизнес-класса в Заволжском районе Твери, 
+									br
+									| на улице Скворцова-Степанова. Возведение объекта пройдёт в 5 этапов. 
+									br
+									| Завершается строительство первой очереди, начатой в III квартале 2015 года. 
+									br
+									| Масштаб проекта позволяет отнести строящийся жилой комплекс к самым крупным в Заволжье...
+							.o-sale__object-address
+								+icon('address-icon', true).o-sale__object-marker
+								| г. Тверь, I этап стротительства
+							a.o-sale__more(href='#')
+								| Подробнее
+								+icon('arrow', true).o-sale__more-icon
+				li.o-sale__item
+					.o-sale__object
+						.o-sale__object-image
+							img(src='assets/images/content/object-img-2.jpg', alt='')
+							+icon('plus-icon', true).o-sale__plus-icon
+							a.o-sale__link(href='#')
+						.o-sale__object-content
+							h3.o-sale__object-title.title-sec Жилой дом «ДЕБЮТ»
+							.o-sale__object-text
+								p
+									| Построенный компанией «Основание» жилой дом «ДЕБЮТ» стал ПЕРВЫМ объектом в районе комплексного освоения
+									| территории Заволжского района города Твери по улице 2-я Красина. 
+									br
+									| К западу от дома расположится гипермаркет «Лента». В настоящее время участок под строительство гипермаркета выкуплен, ведутся проектные работы.
+							.o-sale__object-address
+								+icon('address-icon', true).o-sale__object-marker
+								| г. Тверь, ул. 2-я Красина
+							a.o-sale__more(href='#')
+								| Подробнее
+								+icon('arrow', true).o-sale__more-icon
+				li.o-sale__item
+					.o-sale__object
+						.o-sale__object-image
+							img(src='assets/images/content/object-img-3.jpg', alt='')
+							+icon('plus-icon', true).o-sale__plus-icon
+							a.o-sale__link(href='#')
+						.o-sale__object-content
+							h3.o-sale__object-title.title-sec ЖК «Калинин»
+							.o-sale__object-text
+								p
+									| В Торжке дан старт возведению 5-ти этажного кирпичного дома на 30 квартир (однокомнатные, двухкомнатные,
+									| трёхкомнатные) с индивидуальным отоплением и современными планировками. Это ваша уникальная возможность уже
+									| к 2019 году стать обладателями комфортного жилья в одном из самых живописных городов Тверской Области.
+							.o-sale__object-address
+								+icon('address-icon', true).o-sale__object-marker
+								| г. Торжок
+							a.o-sale__more(href='#')
+								| Подробнее
+								+icon('arrow', true).o-sale__more-icon
+			img.o-sale__third-img(src='assets/images/general/o-sale-third-img.png', alt='')

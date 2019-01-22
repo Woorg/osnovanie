@@ -1,0 +1,217 @@
+.s-articles
+	display block
+	&__in
+		@extends .in
+		padding-top 166px
+		+r($tM)
+			padding-top 90px
+		+r($t)
+			padding-top 36px
+
+	&__title
+		margin-bottom 52px
+		padding-bottom 33px
+		text-align center
+		+r($tM)
+			margin-bottom 32px
+			padding-bottom 26px
+			text-align left
+		&:after
+			left 50%
+			transform translateX(-50%)
+			+r($tM)
+				left 0
+				transform none
+
+	&__slider
+		padding-bottom 138px
+		+r($dM)
+			padding-bottom 0
+		+r($tM)
+			padding-bottom 40px
+		+r($m)
+			padding-bottom 20px
+	&__item
+		padding-left 112px
+		padding-right 112px
+		min-height 393px
+		opacity .55
+		+r($tM)
+			padding-left 15px
+			padding-right 15px
+	&__item-w
+		width 565px
+		+r($tM)
+			width auto
+	.slick-center
+		position relative
+		z-index 1
+	.slick-current
+		.s-articles__item
+			opacity 1
+		.s-articles__content
+			position relative
+			padding-top 83px
+			padding-right 58px
+			width 590px
+			height 393px
+			background-color #c42141
+			+r($tM)
+				padding-top 20px
+				padding-right 23px
+				width auto
+				height 370px
+		.s-articles__content-w
+			position absolute
+			top 33px
+			left -143px
+			padding 44px 46px 44px 50px
+			width 565px
+			height 321px
+			background-color #f4f4f4
+			+r($tM)
+				left -23px
+				right 23px
+				padding-top 16px
+				padding-left 35px
+				padding-right 20px
+				width auto
+				height 295px
+			+r($m)
+				top 20px
+
+
+	&__content
+		position relative
+		padding-right 0
+
+	&__date
+		color #fff
+		font-family $mL
+		font-size 18px
+		font-weight 400
+		line-height 1.333
+		text-align right
+		font-style italic
+		letter-spacing .18px
+		+r($tM)
+			display none
+	&__nav
+		position absolute
+		z-index 1
+		bottom 36px
+		right 50px
+		width 76px
+		height 11px
+		display flex
+		justify-content space-between
+		+r($tM)
+			bottom 16px
+			right 20px
+
+	&__nav-next,
+	&__nav-prev
+		width 26px
+		height 11px
+		cursor pointer
+		text-indent -9999px
+		background url(../images/general/arrow.svg) 0 0 no-repeat
+		background-size cover
+		&:hover
+			opacity .5
+
+	&__nav-next
+		position relative
+		transform rotate(180deg)
+
+	&__count
+		position absolute
+		bottom 77px
+		right 44px
+		display flex
+		justify-content flex-start
+		color #fff
+		font-family $me
+		line-height 1.1
+		+r($tM)
+			bottom 14px
+			left 20px
+			align-items baseline
+			right auto
+	&__count-first
+		margin-top -2px
+		color #40291d
+
+	&__count-first,
+	&__count-sep
+		font-size 28px
+		font-weight 300
+		line-height 1.1
+		letter-spacing .28px
+		+r($tM)
+			font-size 24px
+	&__count-sep
+		padding-left 4px
+		padding-right 4px
+		color #fff
+
+	&__count-last
+		font-size 24px
+		letter-spacing .24px
+		+r($tM)
+			font-size 18px
+	&__content-w
+		position absolute
+		top 33px
+		left 0
+		padding 44px 50px
+		width 565px
+		height 321px
+		background-color #f4f4f4
+
+	&__content-title
+		margin-bottom 40px
+		color #40291d
+		font-family $mB
+		font-size 28px
+		font-weight 400
+		line-height 1.1
+		letter-spacing .84px
+		+r($tM)
+			margin-bottom 20px
+		+r($m)
+			font-size 22px
+	&__content-text
+		margin-bottom 40px
+		+r($tM)
+			margin-bottom 30px
+		+r($m)
+			font-size 14px
+	&__more
+		display flex
+		justify-content flex-start
+		align-items center
+		color #c42141
+		font-family $mM
+		font-size 18px
+		font-weight 400
+		line-height 1.333
+		letter-spacing .18px
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			.s-articles__more-icon
+				margin-left calc(19px + 15px)
+				tr(all .3s ease)
+
+	&__more-icon
+		position relative
+		margin-left 19px
+		width 26px
+		height 11px
+		fill #c42141
+		transform rotate(180deg)
+		tr(all .3s ease)
+
+
+

@@ -1,0 +1,35 @@
+include ../icon/icon
+
+mixin nav()
+	nav.nav.greedy-nav&attributes(attributes)
+		.nav__list-w
+			ul.nav__list
+				li.nav__item
+					a.nav__link(href='#link-1') О компании
+				li.nav__item
+					a.nav__link(href='#link-2') Объекты в продаже
+				li.nav__item
+					a.nav__link(href='#link-3') Спецпредложения
+				li.nav__item
+					a.nav__link(href='#link-4') Документация
+				li.nav__item
+					a.nav__link(href='#link-5') Построенные объекты
+				li.nav__item
+					a.nav__link(href='#link-6') Контакты
+				li.nav__item
+					a.nav__link(href='#link-6') Контакты
+
+			.nav__more
+
+			ul.nav__dropdown.hidden
+				li.nav__item.nav__item_phone
+					a.nav__phone.phone(href='#')
+						+icon('phone-icon', true).phone__icon
+						.phone__val
+							.phone__code (7822)
+							| 78-43-03
+
+
+		//- a.nav__trigger
+		//- 	+icon('menu-icon', true).nav__trigger-icon
+		//- 	+icon('menu-close', true).nav__trigger-close

@@ -1,0 +1,217 @@
+.o-sale
+	// overflow hidden
+
+	&__in
+		@extends .in
+		padding-top 130px
+		+r($tM)
+			padding-top 65px
+		+r($m)
+			padding-top 34px
+	&__in,
+	&__w
+		position relative
+
+	&__w
+		@extends .in
+		+r($tM)
+			display none
+
+	&__in_second
+		padding-top 0
+
+	&__body
+		position relative
+		&:after
+			position absolute
+			z-index -1
+			top 224px
+			right 0
+			left 0
+			content ""
+			min-height 1258px
+			background-color #ededed
+			+r($tM)
+				top 124px
+
+	&__title
+		padding-bottom 38px
+		max-width 286px
+		line-height 1.2
+		+r($tLs)
+			margin-bottom 32px
+		+r($m)
+			padding 4px
+	&__first-img,
+	&__second-img,
+	&__third-img
+		position absolute
+		mix-blend-mode multiply
+		+r($tM)
+			display none
+	&__first-img
+		top -127px
+		right -142px
+
+	&__second-img
+		top 597px
+		right -171px
+
+	&__third-img
+		bottom -120px
+		left -370px
+		opacity .6
+
+	&__list
+		position relative
+		z-index 1
+
+	&__item
+		margin-bottom 97px
+		+r($tM)
+			margin-bottom 30px
+		&:last-child
+			margin-bottom 0
+		&:nth-child(odd)
+			.o-sale__object-image
+				order 0
+				+r($tM)
+					order 0
+		&:nth-child(2n)
+			.o-sale__object-image
+				margin-left -94px
+				margin-right 0
+				order 1
+				+r($tM)
+					margin-left 0
+					order 0
+			.o-sale__object-content
+				padding 40px 120px 36px 60px
+				+r($tM)
+					padding-top 94px
+					padding-left 15px
+					padding-right 15px
+
+	&__object
+		display flex
+		justify-content space-between
+		align-items center
+		+r($tM)
+			display block
+	&__object-image
+		position relative
+		z-index 1
+		border 2px solid #f4f4f4
+		margin-right -94px
+		background transparent
+		padding 12px
+		width 64.58333333333334%
+		height 43.578485181119646%
+		+r($tM)
+			margin-right 0
+			margin-bottom -76px
+			padding 8px
+			width 100%
+			height auto
+		img
+			max-width 100%
+			height auto
+			display block
+		&:hover
+			.o-sale__plus-icon
+				visibility visible
+				opacity 1
+				transition all .3s ease
+
+	&__plus-icon
+		position absolute
+		top 50%
+		left 50%
+		width 43px
+		height 43px
+		visibility hidden
+		opacity 0
+		fill #fff
+		transform translate(-50%,-50%)
+		transition all .3s ease
+
+	&__link
+		position absolute
+		top -1px
+		left -1px
+		bottom -1px
+		right -1px
+
+	&__object-content
+		padding 50px 56px 36px 140px
+		width 590px
+		width 41.94444444444444%
+		min-height 497px
+		background-color #c42141
+		+r($tM)
+			margin-left 40px
+			margin-right 40px
+			padding-top 94px
+			padding-left 56px
+			width auto
+		+r($m)
+			margin-left 30px
+			margin-right 30px
+			padding-left 15px
+			padding-bottom 30px
+			padding-right 15px
+
+	&__object-title
+		margin-bottom 40px
+		padding-bottom 26px
+		+r($tM)
+			margin-bottom 30px
+		+r($m)
+			margin-bottom 18px
+			padding-bottom 20px
+	&__object-text
+		margin-bottom 34px
+		color #fff
+		+r($m)
+			font-size 14px
+	&__object-address
+		margin-bottom 30px
+		display flex
+		justify-content flex-start
+		align-items center
+		color #0c0c0c
+		font-size 14px
+		letter-spacing .14px
+		+r($m)
+			margin-right 20px
+			margin-bottom 30px
+	&__object-marker
+		margin-right 15px
+		width 33px
+		height 33px
+		fill #fff
+
+	&__more
+		display flex
+		justify-content flex-start
+		align-items center
+		color #fff
+		font-size 18px
+		font-weight 400
+		line-height 1.333
+		letter-spacing .18px
+		text-decoration none
+		tr(all .3s ease)
+		&:hover
+			color #fff
+			.o-sale__more-icon
+				margin-left calc(19px + 15px)
+				tr(all .3s ease)
+	&__more-icon
+		position relative
+		margin-left 19px
+		width 26px
+		height 11px
+		fill #fff
+		transform rotate(180deg)
+		tr(all .3s ease)

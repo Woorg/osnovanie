@@ -1,0 +1,39 @@
+mixin slider()
+	.slider&attributes(attributes)
+
+		ul.slider__list
+			li.slider__item
+				.slider__item-w
+					a.slider__link(href='assets/images/content/slider-img-1.jpg')
+						.slider__image
+							img(src='assets/images/content/slider-img-1.jpg' alt='')
+							+icon('slider-icon', true).slider__icon
+
+
+			li.slider__item
+				.slider__item-w
+					a.slider__link(href='assets/images/content/slider-img-2.jpg')
+						.slider__image
+							img(src='assets/images/content/slider-img-2.jpg' alt='')
+							+icon('slider-icon', true).slider__icon
+
+
+			li.slider__item
+				.slider__item-w
+					a.slider__link(href='assets/images/content/slider-img-3.jpg')
+						.slider__image
+							img(src='assets/images/content/slider-img-3.jpg' alt='')
+							+icon('slider-icon', true).slider__icon
+
+
+			li.slider__item
+				.slider__item-w
+					a.slider__link(href='assets/images/content/slider-img-1.jpg')
+						.slider__image
+							img(src='assets/images/content/slider-img-1.jpg' alt='')
+							+icon('slider-icon', true).slider__icon
+
+
+		.slider__nav
+			//- button.slick-prev.slick-arrow(aria-label='Previous' type='button' style='display: block;') Previous
+			//- button.slick-next.slick-arrow(aria-label='Next' type='button' style='display: block;') Next

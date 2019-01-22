@@ -1,0 +1,162 @@
+.hero
+	position relative
+	z-index 1
+	&__in
+		position relative
+		@extends .in
+		z-index 1
+		min-height 650px
+		+r($m)
+			position relative
+			min-height 333px
+			width 100%
+	.slick-list
+		overflow initial
+
+	&__item
+		position relative
+		min-height 650px
+		background-size cover
+		+r($tM)
+			min-width 541px
+		+r($m)
+			min-height 333px
+		&:after
+			position absolute
+			left 0
+			bottom 0
+			right 0
+			content ""
+			height 252px
+			background-image linear-gradient(0deg,rgba(0,0,0,.89) 0,transparent)
+			opacity .78
+
+	&__link
+		color #40291d
+		display block
+		height 100%
+
+	&__content
+		position absolute
+		bottom 0
+		left 65px
+		width 651px
+		height 411px
+		background-color rgba(196,33,65,.9)
+		+r($tM)
+			bottom -80px
+		+r($t)
+			right 18px
+			left 30px
+			width auto
+		+r($m)
+			// right 112px
+			// right 22px
+			width 55%
+			height 214px
+		+r($mS)
+			right 18px
+			width 52%
+
+	&__content-w
+		position absolute
+		top -50px
+		left -50px
+		padding 65px 50px 30px
+		width 621px
+		height 384px
+		background-color #f4f4f4
+		+r($tM)
+			padding 37.5px 25px 15px
+		+r($t)
+			top -30px
+			left -15px
+			right 23px
+			width auto
+			height 354px
+
+		+r($m)
+			padding 12px 4px 12px 18px
+			height 194px
+	&__title
+		margin-bottom 32px
+		padding-bottom 30px
+		line-height 1.2
+		+r($m)
+			margin-bottom 24px
+			padding-bottom 26px
+	&__text
+		margin-right 50px
+		padding-right 50px
+		color #40291d
+		font-family $mL
+		font-size 18px
+		font-weight 300
+		line-height 1.7
+		letter-spacing .18px
+		+r($t)
+			padding-right 0
+		+r($m)
+			margin-right 0
+			font-size 14px
+			line-height 1.4
+	&__nav
+		position absolute
+		z-index 1
+		bottom 36px
+		right 86px
+		width 76px
+		height 11px
+		display flex
+		justify-content space-between
+		+r($m)
+			right 25px
+			bottom 20px
+	&__nav-next,
+	&__nav-prev
+		width 26px
+		height 11px
+		cursor pointer
+		text-indent -9999px
+		background url(../images/general/arrow.svg) 0 0 no-repeat
+		background-size cover
+		&:hover
+			opacity .5
+
+	&__nav-next
+		position relative
+		transform rotate(180deg)
+
+	&__count
+		position absolute
+		bottom 28px
+		left 47px
+		display flex
+		justify-content flex-start
+		color #fff
+		font-family $me
+		font-weight 300
+		line-height 1.1
+		+r($m)
+			left 22px
+			bottom 14px
+
+	&__count-first
+		margin-top -2px
+		color #40291d
+
+	&__count-first,
+	&__count-sep
+		font-size 28px
+		font-weight 300
+		line-height 1.1
+		letter-spacing .28px
+
+	&__count-sep
+		padding-left 1px
+		padding-right 0
+		color #fff
+
+	&__count-last
+		font-size 24px
+		letter-spacing .24px

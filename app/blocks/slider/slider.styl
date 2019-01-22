@@ -1,0 +1,104 @@
+.slider
+	position relative
+	.slick-arrow
+		z-index 1
+		width 90px
+		height 90px
+		background-color #c42141
+		+r($m)
+			position relative
+			transform none
+		&:before
+			display none
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			width 26px
+			height 11px
+			background url(../images/general/arrow.svg) 0 0 no-repeat
+			background-size 26px 11px
+			text-indent -9999px
+			transform translate(-50%,-50%)
+	.slick-next
+		right 0
+		+r($m)
+			margin-right 15px
+		&:after
+			transform translate(-50%,-50%) rotate(180deg)
+	.slick-prev
+		left 0
+		+r($m)
+			margin-right 15px
+
+	&__list
+		display flex
+		justify-content flex-start
+
+	&__item
+		width 451px
+
+	&__item-w
+		padding-left 15px
+		padding-right 15px
+		+r($m)
+			padding-left 0
+			padding-right 0
+
+	&__image
+		position relative
+		&:after
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			content ""
+			visibility hidden
+			opacity 0
+			background rgba(196,33,65,.9)
+		img
+			max-width 100%
+			height auto
+		&:hover
+			&:after
+				visibility visible
+				opacity 1
+				transition all .3s ease
+			.slider__icon
+				visibility visible
+				opacity 1
+				transition all .3s ease
+
+	&__icon
+		position absolute
+		z-index 1
+		top 50%
+		left 50%
+		width 50px
+		height 50px
+		visibility hidden
+		opacity 0
+		fill #fff
+		transform translate(-50%,-50%)
+		transition all .3s ease
+
+	&__link
+		z-index 2
+		top 0
+		bottom 0
+		display block
+
+	&__nav
+		position absolute
+		right 0
+		left 0
+
+	&__nav
+		top 50%
+		+r($m)
+			position static
+			padding-top 16px
+			display flex
+			justify-content center

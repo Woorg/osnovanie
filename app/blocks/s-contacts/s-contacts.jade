@@ -1,0 +1,18 @@
+mixin s-contacts()
+	section.s-contacts&attributes(attributes)
+
+		.s-contacts__in
+			.s-contacts__content
+				h2.s-contacts__title.title Контакты
+				img.s-contacts__img(src='assets/images/content/s-contacts-img.png')
+				.s-contacts__item
+					.s-contacts__item-title Адрес:
+					.s-contacts__item-val г. Тверь, ул. Скворцова - Степанова, д. 25
+				.s-contacts__item
+					.s-contacts__item-title Телефоны отдела продаж :
+					a.s-contacts__item-val(href='tel:+84822784303')
+						| 8
+						| (4822) 78 43 03
+					a.s-contacts__item-val(href='tel:+84822784303') 8 910 935 90 84
+					a.s-contacts__item-val(href='tel:+84822784303') 8 910 535 81 05
+		#map.s-contacts__map

@@ -1,0 +1,37 @@
+.footer
+	background-color #2a2227
+	background url(../images/general/footer-bg.jpg) 0 0 no-repeat
+	+r($tM)
+		background-size cover
+	&__in
+		@extends .in
+	&__top,
+	&__bottom
+		padding-bottom 50px
+		display flex
+		justify-content space-between
+		align-items center
+		+r($dM)
+			padding-top 25px
+			padding-bottom 25px
+
+	&__top
+		border-bottom 2px solid #332f33
+		padding-top 50px
+		flex-flow row wrap
+
+	&__bottom
+		padding-top 48px
+		color #c42141
+		font-family $mM
+		font-size 14px
+		font-weight 500
+		line-height 1
+		letter-spacing .14px
+
+	&__logo
+		+r($tM)
+			margin-bottom 30px
+		+r($t)
+			width 100%
+			text-align center

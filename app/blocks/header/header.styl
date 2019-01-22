@@ -1,0 +1,56 @@
+.header
+	position relative
+	z-index 2
+	background #fff
+
+	&__in
+		@extends .in
+		position relative
+		padding-top 24px
+		padding-bottom 24px
+		min-height 100px
+		display flex
+		justify-content flex-end
+		+r($dM)
+			align-items center
+	&__logo
+		position absolute
+		z-index 1
+		top 0
+		left 11px
+		margin-top -62px
+		+r($dS)
+			margin-top 0
+			height 100%
+
+	// &__nav
+	// 	max-width 968px
+
+.header_inner
+	&:after
+		position absolute
+		top 100%
+		right 0
+		content ""
+		width 1476px
+		height 2px
+		background #c42141
+
+.logo
+
+	&__desk
+		width 224px
+		height 270px
+		+r($dS)
+			display none
+	&__mob
+		position absolute
+		top 50%
+		left 0
+		display none
+		width 193px
+		height 23px
+		fill #c42141
+		+r($dS)
+			display	block
+			transform translateY(-50%)

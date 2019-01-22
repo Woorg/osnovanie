@@ -1,0 +1,50 @@
+.breadcrumbs
+	margin-bottom 64px
+	padding-top 56px
+	padding-bottom 32px
+	display flex
+	justify-content flex-end
+	+r($m)
+		margin-bottom 0
+		padding-top 19px
+		padding-bottom 22px
+
+	&__list
+		max-width 1020px
+		display flex
+		flex-flow row wrap
+		justify-content flex-start
+
+	&__item
+		position relative
+		margin-right 65px
+		&:after
+			position absolute
+			top 50%
+			right -45px
+			content ""
+			width 26px
+			height 2px
+			background #f4f4f4
+		&:last-child
+			margin-right 0
+			&:after
+				display none
+
+	&__item_current
+		.breadcrumbs__link
+			color #c42141
+
+	&__link
+		color #40291d
+		font-family $mL
+		font-size 16px
+		font-weight 300
+		line-height 1.9375
+		letter-spacing .16px
+		text-decoration none
+		+r($m)
+			font-size 12px
+			letter-spacing .12px
+		&:hover
+			color #633f2d

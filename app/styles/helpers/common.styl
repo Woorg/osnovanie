@@ -1,0 +1,252 @@
+// General body styles
+
+.in
+	margin auto
+	padding-left 15px
+	padding-right 15px
+	max-width 1440px
+	+r($t)
+		padding-left 18px
+		padding-right 18px
+
+.page
+	background-color #ffffff
+	font-display swap
+	font-family $mM
+	font-weight normal
+	font-size 16px
+	line-height 1.5
+	color #001d49
+	letter-spacing -.01em
+	&__w
+		display flex
+		flex-direction column
+		min-height 100vh
+		overflow auto
+		overflow hidden
+	&__content
+		flex 1
+	&__in
+		padding-bottom 100px
+		@extends .in
+	&__row
+		padding-bottom 46px
+		border-bottom 2px solid #ebebeb
+		display flex
+		flex-flow row wrap
+		justify-content space-between
+		+r($t)
+			padding-bottom 27px
+	&__row_text-image
+
+		align-items flex-start
+		+r($t)
+			display block
+		.image
+			+r($t)
+				display none
+	&__row_text-image .page__image,
+	&__row_text-image .page__text
+		max-width 48%
+		+r($t)
+			max-width 100%
+	&__row_blockquote
+		padding-top 44px
+		padding-bottom 0
+		+r($t)
+			padding-top 27px
+	&__row_column
+		flex-flow column wrap
+
+	&__tabs
+		margin-bottom 40px
+		padding-top 47px
+		+r($t)
+			padding-top 27px
+
+	&__row_without-style
+		padding-bottom 0
+		border-bottom none
+
+// Sticky footer
+.main
+	flex 1 0 auto
+
+
+
+.transition-fade
+	transition .4s
+	opacity 1
+
+html.is-animating .transition-fade
+	opacity 0
+
+
+
+// img
+// 	max-width 100%
+// 	height auto
+
+// Title
+.title
+	position relative
+	margin-bottom 52px
+	padding-bottom 38px
+	color #40291d
+	font-family $me
+	font-size 48px
+	font-weight 700
+	letter-spacing 1.44px
+	+r($t)
+		font-size 34px
+	+r($m)
+		margin-bottom 29px
+		padding-bottom 25px
+		font-size 22px
+	&:after
+		position absolute
+		bottom 0
+		left 0
+		content ""
+		width 76px
+		height 2px
+		background #c42141
+
+.title-sec
+	position relative
+	color #fefefe
+	font-family $mB
+	font-size 36px
+	// font-weight 700
+	font-weight normal
+	line-height 1
+	letter-spacing 1.08px
+	+r($m)
+		font-size 22px
+	&:after
+		position absolute
+		bottom 0
+		left 0
+		content ""
+		width 76px
+		height 2px
+		background #fff
+
+.image,
+.wysiwyg img
+	border 2px solid #f4f4f4
+	padding 20px
+	max-width 100%
+	height auto
+
+.image img,
+.wysiwyg img img
+	max-width 100%
+	height auto
+.image
+	font-size 0
+
+// Table
+.table
+	position relative
+	margin-bottom 34px
+	width 100%
+	table
+		position relative
+		margin-bottom 0
+		width 100%
+	&__shadow
+		width 100%
+		overflow auto
+		&:after
+			position absolute
+			top 0
+			bottom 0
+			right -20px
+			content ""
+			width 107px
+			display none
+			background-image linear-gradient(270deg,#fff 0,hsla(0,0%,100%,0))
+			+r($tL)
+				display block
+.wysiwyg
+	color #40291d
+	h2,
+	h3
+		margin-bottom 35px
+		font-family $mB
+		font-size 36px
+		font-weight 400
+		line-height 1.333
+		letter-spacing .36px
+		+r($m)
+			margin-bottom 27px
+			font-size 24px
+			letter-spacing .24px
+	p
+		margin-bottom 30px
+		font-family $mM
+		font-weight 400
+		font-size 16px
+		line-height 1.5
+		letter-spacing .16px
+		&:last-child
+			margin-bottom 0
+	blockquote
+		border-left 2px solid #c42141
+		margin-bottom 57px
+		padding-left 54px
+		max-width 705px
+		font-family $mM
+		font-style italic
+		font-size 16px
+		font-weight 500
+		line-height 1.5
+		letter-spacing .16px
+		+r($m)
+			margin-bottom 27px
+			padding-left 19px
+
+	ol,
+	ul
+		margin-left 19px
+		margin-bottom 40px
+	li
+		position relative
+		padding-left 40px
+		margin-bottom 16px
+		font-family $mM
+		font-size 24px
+		font-weight 400
+		line-height 1.25
+		letter-spacing .24px
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ""
+			width 10px
+			height 10px
+			background-color #c42141
+			transform translateY(-50%)
+	table
+		// margin-bottom 45px
+		font-size 24px
+		font-family $mM
+		font-weight 500
+		line-height 1.25
+		letter-spacing .24px
+		+r($m)
+			overflow auto
+		th,
+		td
+			padding 14px 34px 14px 26px
+		th
+			border 2px solid #fff
+			background-color #c42141
+			color #fff
+		td
+			border 2px solid #bfbfbf
+			background-color #f4f4f4
+
+

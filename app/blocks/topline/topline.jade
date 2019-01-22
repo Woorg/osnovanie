@@ -1,0 +1,15 @@
+include ../icon/icon
+
+mixin topline()
+	.topline&attributes(attributes)
+		.topline__in
+			a.topline__address(href='#')
+				+icon('address-icon', true).topline__address-icon
+				| г. Тверь, ул. Скворцова-Степанова, д. 25
+
+			a.topline__phone.phone(href='#')
+				+icon('phone-icon', true).phone__icon
+				.phone__val
+					.phone__code (7822)
+					| 78-43-03
+	

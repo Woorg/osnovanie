@@ -1,6 +1,31 @@
 extends /blocks/layout-default/layout-default
 
+
+include /blocks/icon/icon
+
+include /blocks/topline/topline
+include /blocks/header/header
+include /blocks/main/main
+include /blocks/hero/hero
+include /blocks/s-about/s-about
+include /blocks/o-sale/o-sale
+include /blocks/s-articles/s-articles
+include /blocks/s-contacts/s-contacts
+
+include /blocks/footer/footer
+
+
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Main page';
 
 block content
+	.page__w
+		+topline()
+		+header()
+		+main().page__content#swup.transition-fade
+			+hero()
+			+s-about()
+			+o-sale()
+			+s-articles()
+			+s-contacts()
+		+footer()
